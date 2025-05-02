@@ -1762,11 +1762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/developer/Sources/dotnet/pwa/BlazorPWA/BlazorPWA.csproj",
+      "projectUniqueName": "/home/developer/Desktop/BlazorPWA/BlazorPWA.csproj",
       "projectName": "BlazorPWA",
-      "projectPath": "/home/developer/Sources/dotnet/pwa/BlazorPWA/BlazorPWA.csproj",
+      "projectPath": "/home/developer/Desktop/BlazorPWA/BlazorPWA.csproj",
       "packagesPath": "/home/developer/.nuget/packages/",
-      "outputPath": "/home/developer/Sources/dotnet/pwa/BlazorPWA/obj/",
+      "outputPath": "/home/developer/Desktop/BlazorPWA/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/developer/.nuget/NuGet/NuGet.Config"

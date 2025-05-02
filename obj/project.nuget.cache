@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2O63inr8CgU=",
+  "dgSpecHash": "JM3sXcGRQNo=",
   "success": true,
-  "projectFilePath": "/home/developer/Sources/dotnet/pwa/BlazorPWA/BlazorPWA.csproj",
+  "projectFilePath": "/home/developer/Desktop/BlazorPWA/BlazorPWA.csproj",
   "expectedPackageFiles": [
     "/home/developer/.nuget/packages/microsoft.aspnetcore.authorization/9.0.4/microsoft.aspnetcore.authorization.9.0.4.nupkg.sha512",
     "/home/developer/.nuget/packages/microsoft.aspnetcore.components/9.0.4/microsoft.aspnetcore.components.9.0.4.nupkg.sha512",
