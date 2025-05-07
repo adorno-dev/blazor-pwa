@@ -37,8 +37,22 @@ jobs:
         with:
           dotnet-version: 9.0.x
 
-      - name: Install .NET Wasm Tools
-        run: dotnet workload install wasm-tools
+      - name: Cache .NET Workload Tools
+        uses: actions/cache@v3
+        with:
+          path: ~/.dotnet
+          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-dotnet-
+
+      - name: Check if wasm-tools are installed
+        run: |
+          if ! dotnet --list-runtimes | grep -q 'Microsoft.NETCore.App'; then
+            echo "Installing wasm-tools..."
+            dotnet workload install wasm-tools
+          else
+            echo "wasm-tools already installed"
+          fi
 
       - name: Restore Dependencies
         run: dotnet restore
