@@ -61,7 +61,7 @@ jobs:
         run: dotnet build BlazorPWA.csproj -c Release --no-restore --nologo
 
       - name: Publish .NET
-        run: dotnet publish BlazorPWA.csproj -c Release -o docs --no-restore --nologo
+        run: dotnet publish BlazorPWA.csproj -c Release -o docs --no-restore --no-build --nologo
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
