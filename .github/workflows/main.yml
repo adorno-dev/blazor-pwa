@@ -57,8 +57,11 @@ jobs:
       - name: Restore Dependencies
         run: dotnet restore
 
-      - name: Build and Publish .NET
-        run: dotnet publish BlazorPWA.csproj -c Release -o docs --no-restore --no-build --nologo
+      - name: Build .NET
+        run: dotnet build BlazorPWA.csproj -c Release --no-restore --nologo
+
+      - name: Publish .NET
+        run: dotnet publish BlazorPWA.csproj -c Release -o docs --no-restore --nologo
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
