@@ -2,8 +2,7 @@ name: Deploy
 
 on:
   push:
-    branchs: ["main"]
-
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -24,27 +23,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 9.0.x
-        
+
       - name: Install .NET Wasm Tools
         run: dotnet workload install wasm-tools
-      
+
       - name: Restore Dependencies
         run: dotnet restore
-      
-      - name: Build
-        run: dotnet build -c Release --no-restore
-      
-      - name: Publish .NET
-        run: dotnet publish BlazorPWA.csproj -c:Release -o docs --nologo
+
+      - name: Build and Publish .NET
+        run: dotnet publish BlazorPWA.csproj -c Release -o docs --no-restore --nologo
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with: 

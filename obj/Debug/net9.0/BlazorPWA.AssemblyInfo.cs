@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorPWA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13e74576f80ba08ed33cee672e62790d23af2351")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2076d39943fae15301d9d7b279352956a3395050")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorPWA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorPWA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
